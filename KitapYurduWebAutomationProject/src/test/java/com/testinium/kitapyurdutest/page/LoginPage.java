@@ -16,7 +16,7 @@ public class LoginPage {
         methods.sendKeys(By.id("login-email"),EMAIL);
         methods.sendKeys(By.id("login-password"),PASS);
         methods.clickElement(By.cssSelector("#login > div.ky-form-buttons > button"));
-        methods.waitBySeconds(10);
+        methods.waitBySeconds(2);
         Assertions.assertTrue(methods.isElementVisible(By.cssSelector(".attention")));
 
     }

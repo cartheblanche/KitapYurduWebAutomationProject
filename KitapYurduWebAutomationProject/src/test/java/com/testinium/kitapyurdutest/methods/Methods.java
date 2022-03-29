@@ -68,7 +68,7 @@ public class Methods {
     }
 
     public void waitUntilElementClickable(By by) {
-        log.info("Elementin tıklanabilir olması bekleniyor.");
+        log.info("Waiting for element to be clickable...");
         wait.until(ExpectedConditions.elementToBeClickable(by));
     }
 
@@ -118,8 +118,9 @@ public class Methods {
 
 
     }
-    public String getValue(By by){
-        return jsdriver.executeScript("return arguments[0].value;",findElement(by)).toString();
+
+    public String getValue(By by) {
+        return jsdriver.executeScript("return arguments[0].value;", findElement(by)).toString();
     }
 
     public void clickElement(By by) {
@@ -137,6 +138,7 @@ public class Methods {
         }
         element.click();
     }
+
     public void hoverElement(By by) {
         Actions action = new Actions(driver);
         log.info("Element hovered over: " + by);
