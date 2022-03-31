@@ -8,15 +8,13 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class PointPage {
     Methods methods;
-    LoginTest loginTest;
 
     public PointPage() {
         methods = new Methods();
     }
 
     public void point() {
-        loginTest = new LoginTest();
-        loginTest.loginTest();
+
         methods.clickElement(By.cssSelector("#mainNav > div.nav-content > div > div.lvl1catalog > a"));
 
         methods.clickElement(By.cssSelector("#landing-point > div:nth-child(4) > a:nth-child(2) > img"));
@@ -33,17 +31,6 @@ public class PointPage {
         methods.scrollWithAction(By.cssSelector(String.format(".product-cr:nth-child(%d)", randomNum)));
 
         methods.clickElement(By.cssSelector(String.format(".product-cr:nth-child(%d) [class = hover-menu] [class = add-to-cart] [class = \"fa fa-shopping-cart\"]", randomNum)));
-
-        methods.scrollWithAction(By.cssSelector("#header-top > div > div.top-menu.fr > ul > li:nth-child(1) > div > ul > li > a"));
-
-        methods.hoverElement(By.cssSelector("#header-top > div > div.top-menu.fr > ul > li:nth-child(1) > div > ul > li > a"));
-
-        methods.clickElement(By.cssSelector("#header-top > div > div.top-menu.fr > ul > li:nth-child(1) > div > ul > li > div > ul > li:nth-child(1) > a"));
-
-
-        methods.clickElement(By.cssSelector("#content > div.grid_9 > div.box.no-padding > div.product-filter > div > div.display > a > span"));
-        //methods.hoverElement(By.cssSelector(String.format("#%s > div.image > div > a > img",SearchPage.thirdProduct)));
-        methods.clickElement(By.cssSelector(String.format("#%s > div.grid_2.alpha.omega.relative > div.hover-menu > a:nth-child(3) > i", SearchPage.thirdProduct)));
 
         methods.waitBySeconds(3);
     }

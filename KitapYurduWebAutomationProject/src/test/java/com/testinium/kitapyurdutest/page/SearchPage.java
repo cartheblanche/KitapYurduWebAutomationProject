@@ -27,9 +27,8 @@ public class SearchPage {
         methods.clickElement(By.cssSelector(".product-cr:nth-child(10) [class=\"hover-menu\"] [class=\"add-to-favorites\"] [class = \"fa fa-heart\"]"));
         */
 
-        methods.waitBySeconds(2);
         methods.clickElement(By.cssSelector("#header-bottom > div > div.logo-text > a > img"));
-        methods.waitBySeconds(2);
+
 
     }
 }

@@ -97,9 +97,11 @@ public class Methods {
 
     }
 
+    /*
     public void selectByText(By by, String text) {
         getSelect(by).selectByVisibleText(text);
     }
+     */
 
     private ISelect getSelect(By by) {
         return null;

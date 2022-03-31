@@ -8,8 +8,8 @@ public class LoginPage {
     Methods methods;
     final static String EMAIL = "aberkedural@gmail.com";
     final static String PASS = "animelover-1a1b";
-    public LoginPage(){ methods = new Methods(); }
 
+    public LoginPage(){ methods = new Methods(); }
 
     public void login() {
         methods.clickElement(By.cssSelector("[href=\"https://www.kitapyurdu.com/index.php?route=account/login\"]"));
